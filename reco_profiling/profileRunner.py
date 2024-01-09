@@ -49,6 +49,29 @@ workflow_configs = {
         "nThreads": 1,
         "matrix": "upgrade",
     },
+    # Run3 workflow for 2023
+    "12634.21": {
+        "num_events": 400,
+        "steps": {
+            "step3": {
+                "TimeMemoryInfo": True,
+                "FastTimer": True,
+                "igprof": True,
+            },
+            "step4": {
+                "TimeMemoryInfo": True,
+                "FastTimer": True,
+                "igprof": True,
+            },
+            "step5": {
+                "TimeMemoryInfo": True,
+                "FastTimer": True,
+                "igprof": True,
+            },
+        },
+        "nThreads": 1,
+        "matrix": "upgrade",
+    },
     # Phase2 workflow used in mid-2021
     "23434.21": {
         "num_events": 100,

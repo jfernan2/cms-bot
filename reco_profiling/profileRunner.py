@@ -216,6 +216,19 @@ workflow_configs = {
         "nThreads": 8,
         "matrix": "standard",
     },
+    # 8-thread T0-like promptreco workflow, Run 3
+    "141.044": {
+        "num_events": 5000,
+        "steps": {
+            "step3": {
+                "TimeMemoryInfo": True,
+                "FastTimer": False,
+                "igprof": False,
+            },
+        },
+        "nThreads": 8,
+        "matrix": "standard",
+    },
     # 2018 HI T0-like workflow
     "140.56": {
         "num_events": 1000,

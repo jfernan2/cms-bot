@@ -49,6 +49,29 @@ workflow_configs = {
         "nThreads": 1,
         "matrix": "upgrade",
     },
+    # Run3 workflow for 2023
+    "12634.21": {
+        "num_events": 400,
+        "steps": {
+            "step3": {
+                "TimeMemoryInfo": True,
+                "FastTimer": True,
+                "igprof": True,
+            },
+            "step4": {
+                "TimeMemoryInfo": True,
+                "FastTimer": True,
+                "igprof": True,
+            },
+            "step5": {
+                "TimeMemoryInfo": True,
+                "FastTimer": True,
+                "igprof": True,
+            },
+        },
+        "nThreads": 1,
+        "matrix": "upgrade",
+    },
     # Phase2 workflow used in mid-2021
     "23434.21": {
         "num_events": 100,
@@ -186,6 +209,19 @@ workflow_configs = {
         "steps": {
             "step3": {
                 "TimeMemoryInfo": True,
+                "FastTimer": True,
+                "igprof": True,
+            },
+        },
+        "nThreads": 8,
+        "matrix": "standard",
+    },
+    # 8-thread T0-like promptreco workflow, 2023
+    "141.044": {
+        "num_events": 5000,
+        "steps": {
+            "step3": {
+                "TimeMemoryInfo": True,
                 "FastTimer": False,
                 "igprof": False,
             },
@@ -193,7 +229,20 @@ workflow_configs = {
         "nThreads": 8,
         "matrix": "standard",
     },
-    # 2018 HI T0-like workflow
+    # 8-thread T0-like promptreco workflow, 2022
+    "140.047": {
+        "num_events": 5000,
+        "steps": {
+            "step3": {
+                "TimeMemoryInfo": True,
+                "FastTimer": False,
+                "igprof": False,
+            },
+        },
+        "nThreads": 8,
+        "matrix": "standard",
+    }, 
+   # 2018 HI T0-like workflow
     "140.56": {
         "num_events": 1000,
         "steps": {

@@ -38,12 +38,12 @@ workflow_configs = {
             "step4": {
                 "TimeMemoryInfo": True,
                 "FastTimer": True,
-                "igprof": True,
+                "igprof": False,  #Performance Profile crashes on module DeepTauId/'deepTau2018v2p5ForMini'
             },
             "step5": {
                 "TimeMemoryInfo": True,
                 "FastTimer": True,
-                "igprof": True,
+                "igprof": False,  #Memory profiler crsahes with Segmentation violation right after opening input file
             },
         },
         "nThreads": 1,

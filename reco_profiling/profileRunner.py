@@ -210,7 +210,7 @@ workflow_configs = {
             "step3": {
                 "TimeMemoryInfo": True,
                 "FastTimer": True,
-                "igprof": True,
+                "igprof": False,
             },
         },
         "nThreads": 8,

@@ -61,12 +61,12 @@ workflow_configs = {
             "step4": {
                 "TimeMemoryInfo": True,
                 "FastTimer": True,
-                "igprof": True,
+                "igprof": False,
             },
             "step5": {
                 "TimeMemoryInfo": True,
                 "FastTimer": True,
-                "igprof": True,
+                "igprof": False,
             },
         },
         "nThreads": 1,

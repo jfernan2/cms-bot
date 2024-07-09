@@ -253,7 +253,7 @@ workflow_configs = {
         "steps": {
             "step3": {
                 "TimeMemoryInfo": True,
-                "FastTimer": False,
+                "FastTimer": True,
                 "igprof": False,
             },
         },

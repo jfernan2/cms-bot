@@ -38,12 +38,35 @@ workflow_configs = {
             "step4": {
                 "TimeMemoryInfo": True,
                 "FastTimer": True,
-                "igprof": True,
+                "igprof": False,  # crash in performace profile due to TauId module DeepTauId/'deepTau2018v2p5ForMini
             },
             "step5": {
                 "TimeMemoryInfo": True,
                 "FastTimer": True,
+                "igprof": False, # crash in memory profile with a segmentatio violation right after opening input file
+            },
+        },
+        "nThreads": 1,
+        "matrix": "upgrade",
+    },
+    # Run3 workflow for 2023
+    "12634.21": {
+        "num_events": 400,
+        "steps": {
+            "step3": {
+                "TimeMemoryInfo": True,
+                "FastTimer": True,
                 "igprof": True,
+            },
+            "step4": {
+                "TimeMemoryInfo": True,
+                "FastTimer": True,
+                "igprof": False,
+            },
+            "step5": {
+                "TimeMemoryInfo": True,
+                "FastTimer": True,
+                "igprof": False,
             },
         },
         "nThreads": 1,
@@ -180,8 +203,39 @@ workflow_configs = {
         "nThreads": 1,
         "matrix": "upgrade",
     },
+    # Phase2 workflow used mid-2024 D110 Geometry
+    "29834.21": {
+        "num_events": 100,
+        "steps": {
+            "step3": {
+                "TimeMemoryInfo": True,
+                "FastTimer": True,
+                "igprof": True,
+            },
+            "step4": {
+                "TimeMemoryInfo": True,
+                "FastTimer": True,
+                "igprof": True,
+            },
+        },
+        "nThreads": 1,
+        "matrix": "upgrade",
+    },
     # 8-thread T0-like promptreco workflow
     "136.889": {
+        "num_events": 5000,
+        "steps": {
+            "step3": {
+                "TimeMemoryInfo": True,
+                "FastTimer": True,
+                "igprof": False,
+            },
+        },
+        "nThreads": 8,
+        "matrix": "standard",
+    },
+    # 8-thread T0-like promptreco workflow, 2023
+    "141.044": {
         "num_events": 5000,
         "steps": {
             "step3": {
@@ -193,7 +247,20 @@ workflow_configs = {
         "nThreads": 8,
         "matrix": "standard",
     },
-    # 2018 HI T0-like workflow
+    # 8-thread T0-like promptreco workflow, 2022
+    "140.047": {
+        "num_events": 5000,
+        "steps": {
+            "step3": {
+                "TimeMemoryInfo": True,
+                "FastTimer": True,
+                "igprof": False,
+            },
+        },
+        "nThreads": 8,
+        "matrix": "standard",
+    }, 
+   # 2018 HI T0-like workflow
     "140.56": {
         "num_events": 1000,
         "steps": {

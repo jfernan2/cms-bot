@@ -208,14 +208,14 @@ workflow_configs = {
         "num_events": 100,
         "steps": {
             "step3": {
-                "TimeMemoryInfo": True,
+                "TimeMemoryInfo": False,
                 "FastTimer": True,
-                "igprof": True,
+                "igprof": False,
             },
             "step4": {
-                "TimeMemoryInfo": True,
+                "TimeMemoryInfo": False,
                 "FastTimer": True,
-                "igprof": True,
+                "igprof": False,
             },
         },
         "nThreads": 1,

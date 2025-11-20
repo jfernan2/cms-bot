@@ -197,7 +197,7 @@ workflow_configs = {
             "step4": {
                 "TimeMemoryInfo": False,
                 "FastTimer": True,
-                "igprof": Falsee,
+                "igprof": False,
             },
         },
         "nThreads": 1,

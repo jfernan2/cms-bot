@@ -72,6 +72,29 @@ workflow_configs = {
         "nThreads": 1,
         "matrix": "upgrade",
     },
+    # Run3 workflow for 2024
+    "13034.21": {
+        "num_events": 400,
+        "steps": {
+            "step3": {
+                "TimeMemoryInfo": True,
+                "FastTimer": True,
+                "igprof": True,
+            },
+            "step4": {
+                "TimeMemoryInfo": True,
+                "FastTimer": True,
+                "igprof": False,
+            },
+            "step5": {
+                "TimeMemoryInfo": True,
+                "FastTimer": True,
+                "igprof": False,
+            },
+        },
+        "nThreads": 1,
+        "matrix": "upgrade",
+    },
     # Phase2 workflow used in mid-2021
     "23434.21": {
         "num_events": 100,
@@ -190,9 +213,9 @@ workflow_configs = {
         "num_events": 100,
         "steps": {
             "step3": {
-                "TimeMemoryInfo": False,
+                "TimeMemoryInfo": True,
                 "FastTimer": True,
-                "igprof": False,
+                "igprof": True,
             },
             "step4": {
                 "TimeMemoryInfo": False,
@@ -208,9 +231,9 @@ workflow_configs = {
         "num_events": 100,
         "steps": {
             "step3": {
-                "TimeMemoryInfo": False,
+                "TimeMemoryInfo": True,
                 "FastTimer": True,
-                "igprof": False,
+                "igprof": True,
             },
             "step4": {
                 "TimeMemoryInfo": False,
@@ -260,6 +283,19 @@ workflow_configs = {
         "nThreads": 8,
         "matrix": "standard",
     }, 
+    # 2025 RunJetMET02025C 
+    "2025.0010001": {
+        "num_events": 5000,
+        "steps": {
+            "step3": {
+                "TimeMemoryInfo": True,
+                "FastTimer": True,
+                "igprof": False,
+            },
+        },
+        "nThreads": 8,
+        "matrix": "standard",
+    },
    # 2018 HI T0-like workflow
     "140.56": {
         "num_events": 1000,

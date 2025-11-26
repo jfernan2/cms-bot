@@ -244,6 +244,24 @@ workflow_configs = {
         "nThreads": 1,
         "matrix": "upgrade",
     },
+    # Phase2 workflow used late-2025 D121 Geometry
+    "34434.21": {
+        "num_events": 100,
+        "steps": {
+            "step3": {
+                "TimeMemoryInfo": True,
+                "FastTimer": True,
+                "igprof": True,
+            },
+            "step4": {
+                "TimeMemoryInfo": False,
+                "FastTimer": True,
+                "igprof": False,
+            },
+        },
+        "nThreads": 1,
+        "matrix": "upgrade",
+    },
     # 8-thread T0-like promptreco workflow
     "136.889": {
         "num_events": 5000,

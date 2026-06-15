@@ -338,7 +338,7 @@ def prepareMatrixWF(workflow_number, num_events, matrix="upgrade", nthreads=1):
         matrix,
         "-l",
         str(workflow_number),
-        '--command="--no_exec --maxmem_profile"',
+        '--command="--no_exec"',
         "--ibeos",
         "--nThreads",
         str(nthreads),

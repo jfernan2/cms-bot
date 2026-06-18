@@ -434,7 +434,7 @@ def configureProfilingSteps(cmsdriver_lines, num_events, steps_config):
             istep = int(spl.replace("step", ""))
         else:
             istep = 1
-        steps[istep] = line + ' -n {num_events} --suffix "-j step{istep}_JobReport.xml"'.format(
+        steps[istep] = line + ' -n {num_events} --maxmem_profile --suffix "-j step{istep}_JobReport.xml"'.format(
             istep=istep, num_events=num_events
         )
 

@@ -434,7 +434,7 @@ def configureProfilingSteps(cmsdriver_lines, num_events, steps_config):
             istep = int(spl.replace("step", ""))
         else:
             istep = 1
-        steps[istep] = line + ' -n {num_events} --maxmem_profile --suffix "-j step{istep}_JobReport.xml"'.format(
+        steps[istep] = line + ' -n {num_events} --suffix "-j step{istep}_JobReport.xml"'.format(
             istep=istep, num_events=num_events
         )
 
@@ -445,7 +445,7 @@ def configureProfilingSteps(cmsdriver_lines, num_events, steps_config):
 
     # First run all the steps without any special options
     new_cmdlist = [
-        steps[istep] + "&>step{istep}.log".format(istep=istep) for istep in steps_to_run
+        steps[istep] + " --maxmem_profile &>step{istep}.log".format(istep=istep) for istep in steps_to_run
     ]
 
     igprof_commands = []

@@ -245,7 +245,43 @@ workflow_configs = {
         "matrix": "upgrade",
     },
     # Phase2 workflow used late-2025 D121 Geometry
-    "34434.21": {
+    "34634.21": {
+        "num_events": 100,
+        "steps": {
+            "step3": {
+                "TimeMemoryInfo": True,
+                "FastTimer": True,
+                "igprof": True,
+            },
+            "step4": {
+                "TimeMemoryInfo": False,
+                "FastTimer": True,
+                "igprof": False,
+            },
+        },
+        "nThreads": 1,
+        "matrix": "upgrade",
+    },
+    # Phase2 workflow used mid-2026 D127 Geometry for 20_0 release
+    "38234.21": {
+        "num_events": 100,
+        "steps": {
+            "step3": {
+                "TimeMemoryInfo": True,
+                "FastTimer": True,
+                "igprof": True,
+            },
+            "step4": {
+                "TimeMemoryInfo": False,
+                "FastTimer": True,
+                "igprof": False,
+            },
+        },
+        "nThreads": 1,
+        "matrix": "upgrade",
+    },
+    # Phase2 workflow used mid-2026 D127 Geometry for > 20_1 release
+    "37234.21": {
         "num_events": 100,
         "steps": {
             "step3": {
@@ -338,7 +374,7 @@ def prepareMatrixWF(workflow_number, num_events, matrix="upgrade", nthreads=1):
         matrix,
         "-l",
         str(workflow_number),
-        '--command="--no_exec --maxmem_profile"',
+        '--command="--no_exec"',
         "--ibeos",
         "--nThreads",
         str(nthreads),
@@ -445,7 +481,7 @@ def configureProfilingSteps(cmsdriver_lines, num_events, steps_config):
 
     # First run all the steps without any special options
     new_cmdlist = [
-        steps[istep] + "&>step{istep}.log".format(istep=istep) for istep in steps_to_run
+        steps[istep] + " --maxmem_profile &>step{istep}.log".format(istep=istep) for istep in steps_to_run
     ]
 
     igprof_commands = []

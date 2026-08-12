@@ -262,8 +262,26 @@ workflow_configs = {
         "nThreads": 1,
         "matrix": "upgrade",
     },
-    # Phase2 workflow used mid-2026 D127 Geometry 
+    # Phase2 workflow used mid-2026 D127 Geometry for 20_0 release
     "38234.21": {
+        "num_events": 100,
+        "steps": {
+            "step3": {
+                "TimeMemoryInfo": True,
+                "FastTimer": True,
+                "igprof": True,
+            },
+            "step4": {
+                "TimeMemoryInfo": False,
+                "FastTimer": True,
+                "igprof": False,
+            },
+        },
+        "nThreads": 1,
+        "matrix": "upgrade",
+    },
+    # Phase2 workflow used mid-2026 D127 Geometry for > 20_1 release
+    "37234.21": {
         "num_events": 100,
         "steps": {
             "step3": {
